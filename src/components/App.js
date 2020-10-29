@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import "../assets/styles/style.css";
 
 
-import Navbar from "./Navbar";
+import Navbar from "./NavbarComponent";
 import Footer from "./Footer";
 import Homepage from "./Homepage";
 import PrivateRoute from "../routeComponent/auth/PrivateRoute";
