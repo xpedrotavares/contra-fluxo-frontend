@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import photoChamada from "../photo-chamada.jpg";
+import photoChamada from "../photo-chamada.png";
 import photoCard from "../photo-card.jpg";
 import photoManifesto from "../photo-manifesto.jpg";
 import book from "../../src/capa-de-livro.jpg";
@@ -12,13 +12,22 @@ import CardsHomepage from "./CardsHomepage";
 //------ Material Ui -------
 
 import { Grid } from "@material-ui/core";
-
+import Box from '@material-ui/core/Box';
+import { sizing } from '@material-ui/system'
 import { makeStyles } from "@material-ui/core/styles"
 
 const useStyles = makeStyles({
   gridContainer: {
     paddingLeft: '20px',
     paddingRight: '20px'
+  },
+  gridChamada:{
+    height: '90vh',
+   
+  },
+  paddingPhotoChamada: {
+    paddingLeft: '50px',
+    paddingRight: '50px'
   }
 });
 
@@ -27,29 +36,13 @@ function Homepage() {
 
   return (
     <div className="homepage-container container-fluid p-0">
-      <div className="homepage-main container-fluid d-flex justify-content-center align-items-center ">
-        <div className="row">
-          <div className="col-2 text-right pr-0 ">
-            <h1 className="h1-chamada"> CONTRA </h1>
-          </div>
-          {/* <div className="col-8 div-image-chamada pl-0"></div> */}
-          <div className="col-10 div-image-chamada pl-0">
-            <img
-              className="photo-chamada"
-              src={photoChamada}
-              alt="mulher deitada no chão pintando"
-            />
-            <div className="h1-over-image-chamada"> FLUXO </div>
-            <span className="lugar-certo">O lugar certo</span>
-            <span className="para-artistas-independentes">
-              para
-              <span className="destaque-amarelo"> artistas independentes.</span>
-            </span>
-          </div>
+     <Box height='90vh' >
 
-          <img />
-        </div>
-      </div>
+        <Grid container display="flex" justify="center"  alignItems="center"   style={{ minHeight: '90vh' }}  >
+          <img src={photoChamada} className={classes.paddingPhotoChamada}/>
+        </Grid>
+
+     </Box>
 
       <Grid container spacing={4} className={classes.gridContainer} align-items-center="center">
         <Grid item xs={12} sm={6} md={4} lg={4}>
